@@ -4,7 +4,7 @@ Template CMake project for x64dbg plugins. This uses [cmkr](https://cmkr.build),
 
 ## Using the template
 
-You can click the green *Use this template* button. See the article [*Creating a repository from a template*
+You can click the green _Use this template_ button. See the article [_Creating a repository from a template_
 ](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) by GitHub for more details.
 
 Alternatively you can download a ZIP of this repository and set up the template locally.

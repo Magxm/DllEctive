@@ -27,7 +27,7 @@ endif()
 include("cmake/msvc-static-runtime.cmake")
 include("cmake/msvc-configurations.cmake")
 
-project(PluginTemplate)
+project(DllEctive)
 
 include(FetchContent)
 
@@ -38,7 +38,7 @@ endif()
 message(STATUS "Fetching x64dbg...")
 FetchContent_Declare(x64dbg
 	URL
-		"https://downloads.sourceforge.net/project/x64dbg/snapshots/snapshot_2023-06-10_18-05.zip"
+		"https://sourceforge.net/projects/x64dbg/files/snapshots/snapshot_2023-06-10_18-05.zip"
 	URL_HASH
 		SHA1=04468bd61fb36d6b10d17f342f03ef12f5b2ce62
 )
@@ -46,8 +46,8 @@ FetchContent_MakeAvailable(x64dbg)
 
 include("cmake/x64dbg.cmake")
 
-# Target: PluginTemplate
-set(PluginTemplate_SOURCES
+# Target: DllEctive
+set(DllEctive_SOURCES
 	"src/plugin.cpp"
 	"src/pluginmain.cpp"
 	"src/plugin.h"
@@ -55,8 +55,8 @@ set(PluginTemplate_SOURCES
 	cmake.toml
 )
 
-x64dbg_plugin(PluginTemplate)
+x64dbg_plugin(DllEctive)
 
-target_sources(PluginTemplate PRIVATE ${PluginTemplate_SOURCES})
-source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${PluginTemplate_SOURCES})
+target_sources(DllEctive PRIVATE ${DllEctive_SOURCES})
+source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${DllEctive_SOURCES})
 
